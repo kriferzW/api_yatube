@@ -5,7 +5,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')), # Путь должен начинаться с api/
+    path('api/', include('api.urls')),
 ]
 
 
