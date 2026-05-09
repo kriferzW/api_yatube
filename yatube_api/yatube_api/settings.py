@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'posts.apps.PostsConfig',
+    'djoser',
     'rest_framework',
     'rest_framework.authtoken',  # КРИТИЧНО: без этого Token.objects не будет работать
     'api.apps.ApiConfig',        # Твое новое приложение
