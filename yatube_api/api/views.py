@@ -10,7 +10,6 @@ from .permissions import IsAuthorOrReadOnly
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    # Добавляем IsAuthenticated, чтобы анонимы получали 401
     permission_classes = [IsAuthenticated, IsAuthorOrReadOnly]
 
     def perform_create(self, serializer):
@@ -20,7 +19,6 @@ class PostViewSet(viewsets.ModelViewSet):
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    # Группы тоже должны быть доступны только авторизованным
     permission_classes = [IsAuthenticated]
 
 
